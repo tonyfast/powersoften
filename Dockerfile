@@ -8,3 +8,4 @@ COPY . ${HOME}
 USER root
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
+RUN jupyter nbconvert --execute readme.ipynb

@@ -6,4 +6,4 @@ services:
       context: .
     command: jupyter lab --no-browser --debug
     ports:
-      - 9999:9999
+      - 8888:8888
