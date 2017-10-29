@@ -7,10 +7,20 @@ COPY environment.yml /home/jovyan/environment.yml
 RUN conda env update -n root --file /home/jovyan/environment.yml && \
     conda clean -tipsy
 
-RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager
-RUN jupyter nbextension install rise --py --sys-prefix
-RUN jupyter nbextension enable rise --py --sys-prefix
-RUN jupyter nbextension enable ipywebrtc --py --sys-prefix
+RUN set -ex && \
+  jupyter nbextension install rise --py --sys-prefix && \
+  jupyter nbextension enable rise --py --sys-prefix && \
+  jupyter nbextension enable ipywebrtc --py --sys-prefix
+
+# do this to get the toolchain
+RUN jupyter lab build
+
+COPY ./labextensions/* /home/jovyan/labextensions/
+
+RUN set -ex && \
+  jupyter labextension install @jupyter-widgets/jupyterlab-manager --no-build && \
+  jupyter labextension install file:///home/jovyan/labextensions/jupyter-webrtc-jupyterlab-0.1.0.tgz && \
+  jupyter labextension list
 
 COPY . ${HOME}
 USER root
