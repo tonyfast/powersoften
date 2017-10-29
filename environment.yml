@@ -1,0 +1,17 @@
+name: powersoften
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - ipywebrtc
+  - ipywidgets >=7.0.1,<8
+  - jupyterlab
+  - pandas
+  - python >=3.6,<3.7
+  - scikit-learn
+  - toolz
+  - nodejs
+  - pip:
+    - git+https://github.com/tonyfast/articles@b547076b1e8d5b0fe52c33bde1bf787ebbca185e#egg=articles
+    - git+https://github.com/tonyfast/importable@933bfa48e84399b25ba1cc86b2ad2d7ca317abde#egg=importable
+    - git+https://github.com/tonyfast/literacy@86651bcde46ec0e1e73ae219ef6054cd05803054#egg=literacy
