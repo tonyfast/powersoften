@@ -7,7 +7,8 @@ install:
 
 script:
 - rm .gitignore
-- jupyter nbconvert --to markdown --execute readme.ipynb
+- python setup.py install
+- jupyter nbconvert --to markdown --execute renci/readme.ipynb
 - ls **
 
 deploy:
