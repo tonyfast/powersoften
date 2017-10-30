@@ -91,7 +91,7 @@ For each topic:
 
 
     [NbConvertApp] Converting notebook intro.ipynb to slides
-    [NbConvertApp] Writing 271131 bytes to intro.slides.html
+    [NbConvertApp] Writing 272748 bytes to intro.slides.html
     [NbConvertApp] Converting notebook design.ipynb to slides
     [NbConvertApp] Writing 284544 bytes to design.slides.html
     [NbConvertApp] Converting notebook systems.ipynb to slides
@@ -105,7 +105,7 @@ For each topic:
     [NbConvertApp] Converting notebook culture.ipynb to slides
     [NbConvertApp] Writing 280696 bytes to culture.slides.html
     [NbConvertApp] Converting notebook full.ipynb to slides
-    [NbConvertApp] Writing 549748 bytes to full.slides.html
+    [NbConvertApp] Writing 552488 bytes to full.slides.html
 
 
 
@@ -157,8 +157,4 @@ Finally, __trust__ and convert the slide.
 
 
     Notebook already signed: index.ipynb
-    [NbConvertApp] Converting notebook index.ipynb to html
-    [NbConvertApp] Writing 253921 bytes to index.html
-    [NbConvertApp] Converting notebook index.ipynb to slides
-    [NbConvertApp] Writing 259257 bytes to index.slides.html
 
