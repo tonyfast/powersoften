@@ -6,3 +6,9 @@ diffs
 !code_of_conduct.md
 !readme.md
 *.pyc
+*.xls
+*.xlsx
+notebooks/
+*.csv
+*.egg-info
+*.json
