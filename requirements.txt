@@ -1,4 +1,5 @@
 notebook
+requests
 git+https://github.com/tonyfast/articles.git
 git+https://github.com/tonyfast/importable.git
 git+https://github.com/tonyfast/literacy.git
