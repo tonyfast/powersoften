@@ -26,7 +26,10 @@ The Nick and Tony Show
 
 # Topics
 
-The major `topics = 'intro, design, systems, materials, community, media, culture'.replace(' ','').split(',')`.  
+The major `topics = 'intro, design, systems, materials, community, media, culture'.\`  
+
+        
+        replace(' ','').split(',')
 
 
 
@@ -131,5 +134,5 @@ The major `topics = 'intro, design, systems, materials, community, media, cultur
 
 
     [NbConvertApp] Converting notebook readme.ipynb to markdown
-    [NbConvertApp] Writing 5106 bytes to readme.md
+    [NbConvertApp] Writing 4949 bytes to readme.md
 
