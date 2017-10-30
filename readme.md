@@ -6,22 +6,6 @@ November 1, 2017
 The Nick and Tony Show
 
 
-<style>
-    iframe {
-        width: 100%;
-        min-height: 80vh;
-    }
-
-    body.rise-enabled .code_cell .input,
-    div.reveal .code_cell .input,
-    div.reveal .output_stderr,
-    div.rise-enabled .output_stderr {
-        display: none;
-    }
-</style>
-
-
-
 ## RIPx Media
 
 ## Remote
@@ -98,4 +82,54 @@ The major `topics = 'intro, design, systems, materials, community, media, cultur
     jupyter nbconvert --to slides --config rise.py  media.ipynb 
     jupyter nbconvert --to slides --config rise.py  culture.ipynb
     popd
+
+
+    ~/powersoften/renci ~/powersoften
+    ~/powersoften
+
+
+    [NbConvertApp] Converting notebook intro.ipynb to slides
+    [NbConvertApp] Writing 361410 bytes to intro.slides.html
+    [NbConvertApp] Converting notebook design.ipynb to slides
+    [NbConvertApp] Writing 284544 bytes to design.slides.html
+    [NbConvertApp] Converting notebook systems.ipynb to slides
+    [NbConvertApp] Writing 286906 bytes to systems.slides.html
+    [NbConvertApp] Converting notebook materials.ipynb to slides
+    [NbConvertApp] Writing 1454455 bytes to materials.slides.html
+    [NbConvertApp] Converting notebook community.ipynb to slides
+    [NbConvertApp] Writing 305994 bytes to community.slides.html
+    [NbConvertApp] Converting notebook media.ipynb to slides
+    [NbConvertApp] Writing 427931 bytes to media.slides.html
+    [NbConvertApp] Converting notebook culture.ipynb to slides
+    [NbConvertApp] Writing 280974 bytes to culture.slides.html
+
+
+
+## Create a master notebook.
+    
+    nb = new_notebook()    
+    for topic in topics:
+        topic = 'renci' / Path(topic)
+        cells = reads(topic.with_suffix('.ipynb').read_text(), 4).cells
+        for i, cell in enumerate(cells):
+            if 'slideshow' in cell['metadata'] and cell['metadata']['slideshow']['slide_type'] != 'skip':
+                if i>0 and cell['cell_type'] == 'code' and cell['metadata']['slideshow']['slide_type'] =='slide': 
+                    cell['metadata']['slideshow']['slide_type'] = 'subslide'
+                nb.cells.append(cell)
+    nb.cells.append(new_code_cell("import style", outputs=[new_output('display_data', {'text/html': [css]})]))
+    (topic.parent / Path('index.ipynb')).write_text(writes(nb))
+    !jupyter trust renci/index.ipynb
+    !jupyter nbconvert --to slides --config rise.py --stdout renci/index.ipynb > index.html
+
+
+    Notebook already signed: renci/index.ipynb
+    [NbConvertApp] Converting notebook renci/index.ipynb to slides
+
+
+
+    !jupyter nbconvert --to markdown --TemplateExporter.exclude_input=True readme.ipynb
+
+
+    [NbConvertApp] Converting notebook readme.ipynb to markdown
+    [NbConvertApp] Writing 5106 bytes to readme.md
 
