@@ -1,5 +1,5 @@
 language: python
-python: 
+python:
 - 3.6
 
 install:
@@ -7,8 +7,7 @@ install:
 
 script:
 - rm .gitignore
-- python setup.py install
-- jupyter nbconvert --to markdown --execute renci/readme.ipynb
+- jupyter nbconvert --to markdown --execute readme.ipynb
 - ls **
 
 deploy:
