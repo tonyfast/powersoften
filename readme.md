@@ -14,7 +14,7 @@ The Nick and Tony Show
 * [Nbviewer](http://nbviewer.jupyter.org/format/slides/github/tonyfast/powersoften/blob/gh-pages/renci/index.ipynb#/) provides interative versions of static notebooks.  `assert \`ing `Javascript and IFrame`s still work 
 * [Travis](https://travis-ci.org/tonyfast/powersoften) builds our docs ...
 * ... on [Github Pages](https://tonyfast.github.io/powersoften/#/)
-* [Binder]()
+* [Binder](#)
 * [Raw Git](https://cdn.rawgit.com/tonyfast/powersoften/gh-pages/index.html)
 
 ## Local
@@ -134,5 +134,5 @@ The major `topics = 'intro, design, systems, materials, community, media, cultur
 
 
     [NbConvertApp] Converting notebook readme.ipynb to markdown
-    [NbConvertApp] Writing 4949 bytes to readme.md
+    [NbConvertApp] Writing 4806 bytes to readme.md
 
