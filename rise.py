@@ -1,0 +1,1 @@
+c.SlidesExporter.reveal_url_prefix="https://cdn.jsdelivr.net/npm/reveal.js@3.5.0"
