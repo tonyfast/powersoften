@@ -3,9 +3,10 @@ channels:
   - defaults
   - conda-forge
 dependencies:
-  - ipywebrtc
+  - antlr
+  - ipywebrtc ==0.3.0
   - ipywidgets >=7.0.1,<8
-  - jupyterlab
+  - jupyterlab ==0.28.12
   - lxml
   - nodejs
   - pandas
@@ -14,7 +15,7 @@ dependencies:
   - toolz
   - tqdm
   - pip:
-    - git+https://github.com/tonyfast/articles@b547076b1e8d5b0fe52c33bde1bf787ebbca185e#egg=articles
+    - git+https://github.com/tonyfast/articles@ed28390966395d8ffec1b730b2837768150ee889#egg=articles
     - git+https://github.com/tonyfast/importable@933bfa48e84399b25ba1cc86b2ad2d7ca317abde#egg=importable
-    - git+https://github.com/tonyfast/literacy@86651bcde46ec0e1e73ae219ef6054cd05803054#egg=literacy
+    - git+https://github.com/tonyfast/literacy@30c98605b87c9faab2800aae10cd69a2ca3d5765#egg=literacy
     - rise
