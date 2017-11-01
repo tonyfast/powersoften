@@ -6,10 +6,6 @@ def read(fname):
     with open(join(dirname(__file__), fname)) as f:
         return f.read()
 
-
-from distutils.core import setup, Command
-# you can also import from setuptools
-
 setuptools.setup(
     name="powersoften",
     version="0.0.1",
